@@ -1,0 +1,52 @@
+body {
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+main {
+  text-align: center;
+}
+
+nav {
+  background-color: rgb(31, 31, 31);
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+}
+
+header {
+  background-color: gray;
+  margin-bottom: 0;
+}
+
+section {
+  background-color: lightgray;
+  min-height: 100px;
+}
+
+.project-divider {
+  background-color: black;
+  color: white;
+}
+
+footer {
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+
+
+
+h2, p, h1 {
+  margin: 0;
+}
+
+h1 {
+  padding-top: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+
