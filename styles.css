@@ -1,10 +1,16 @@
+/* Fonts
+'Yeseva One', cursive; => headline
+'Merriweather', serif; => headings, special things
+'Merriweather Sans', sans-serif => paragraph text */
+
 body {
   margin: 0 auto;
-  font-family: sans-serif;
+  font-family: 'Merifweather Sans', sans-serif;
 }
 
 main {
   text-align: center;
+  font-size: 18px;
 }
 
 nav {
@@ -14,9 +20,17 @@ nav {
   padding-right: 10px;
 }
 
-header {
-  background-color: gray;
+header {  
   margin-bottom: 0;
+  font-family: 'Yeseva One', cursive;
+}
+
+.headshot {
+  height: 250px;
+}
+
+.intro-text {
+  font-size: 10vw;
 }
 
 section {
@@ -24,9 +38,17 @@ section {
   min-height: 100px;
 }
 
+.project-photo {
+  width: 80%;
+}
+
 .project-divider {
   background-color: black;
   color: white;
+}
+
+.divider-text {
+  font-family: 'Merriweather', serif;
 }
 
 footer {
@@ -36,7 +58,7 @@ footer {
 
 
 
-h2, p, h1 {
+h2, p, h1, h3, ul{
   margin: 0;
 }
 
@@ -44,9 +66,96 @@ h1 {
   padding-top: 30px;
 }
 
+h2 {
+  font-size: 25px;
+  padding: 10px;
+}
+
+h3 {
+  font-size: 23px;
+  padding: 10px;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0px;
+  padding-top: 5px;
+  padding-bottom: 10px
 }
 
+li, p {
+  font-size: 20px;
+  line-height: 26px;
+}
 
+/* MEDIA QUERIES */
+
+@media (min-width: 500px) {
+  .intro-flex-container, .project-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .headshot {
+    height: 350px;
+    padding: 40px;
+    padding-top: 20px;
+  }
+
+  .bio {
+    padding-top: 20px;
+    width: 50%;
+    text-align: left;
+  }
+
+  .project-photo {
+    order: -1;
+    width: 40%;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+
+  .technology-badges {
+    padding-bottom: 20px;
+  }
+
+  .abilities-flex-container, .contact-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 15px;
+  }
+
+  main {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 100px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 27px;
+  }
+
+  .headline {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+  }
+
+  .main-flex-container {
+    width: 1200px;
+  }
+}
