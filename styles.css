@@ -18,17 +18,6 @@ main {
 
 .desktop-nav {
   display: none;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  text-align: right;
-  padding-right: 10px;
-}
-
-.desktop-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 
 header {  
@@ -38,18 +27,11 @@ header {
 
 .headshot {
   display: none;
-  /* height: 100%;
-  width: 200px; */
-  /* margin-top: 30px; */
-  /* border-radius: 20px; */
 }
 
 .intro-text {
-  /* font-size: 60px; */
   color: white;
   text-shadow: 5px 5px 8px black;
-  /* padding-top: 70px; */
-  /* padding-left: 30px; */
   text-align: center;
 }
 
@@ -76,7 +58,7 @@ section {
   font-family: 'Philosopher', sans-serif;
 }
 
-.mobile {
+.mobile, .desktop {
   text-decoration: none;
   color: lightgray;
   margin-left: 20px;
@@ -331,19 +313,66 @@ footer {
   margin-bottom: 50px;
 }
 
-/* MEDIA QUERIES */
+/* ---------------------MEDIA QUERIES---------------- */
 
 @media (min-width: 550px) {
 
+  .desktop-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
   .desktop-nav {
     display: inline;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: right;
+    padding-right: 10px;
   }
 
   .mobile-nav {
     display: none;
   }
 
+  .headshot {
+    display: block;
+    height: 100%;
+    /* margin-top: 40px; */
+    padding-top: 20px;
+    padding-left: 40px;
+    width: 350px;
+  }
+
+  .intro-flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headshot-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bio-paragraphs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bio1 {
+    width: 50%;
+
+  }
+
+  .bio2 {
+    border-left: solid 2px rgb(46, 46, 46);
+    width: 50%;
+  }
+
   .bio-opener {
+    margin: 20px;
+    padding-top: 15%;
     font-size: 25px;
   }
 
@@ -351,15 +380,9 @@ footer {
     display: block;
   }
 
-  footer {
-    margin-bottom: 0px;
-  }
-
-  .headshot {
-    display: block;
-    padding: 40px;
-    padding-top: 20px;
-    width: 300px;
+  .intro-flex-container h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
 
   .bio {
@@ -380,12 +403,20 @@ footer {
     padding-bottom: 20px;
   }
 
-  .abilities-flex-container, .contact-flex-container {
+  .abilities-flex-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 15px;
   }
+
+  /* .contact-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px 10px;
+    flex-wrap: wrap;
+  } */
 
   main {
     font-size: 20px;
@@ -414,6 +445,10 @@ footer {
   .img2, .img3, .img4 {
     background-attachment: scroll,  
     fixed;
+  }
+
+  footer {
+    margin-bottom: 0px;
   }
 }
 
