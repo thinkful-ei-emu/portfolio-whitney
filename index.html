@@ -6,18 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Muli|Philosopher|Merriweather&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli|Philosopher&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Whitney Wallace</title>
 </head>
 <body>
   <!-- Main -->
-  <main>
+  <main role="main">
     <div class="main-flex-container">
       <!-- Header -->
-      <header class="img1">
+      <header role="banner" class="img1">
         <!-- Desktop Nav -->
-        <nav class="desktop-nav">
+        <nav role="navigation" class="desktop-nav">
           <ul>
             <li><a class="about desktop" href="#about">About Me</a></li>
             <li><a class="projects desktop" href="#projects">Projects</a></li>
@@ -27,11 +27,12 @@
         </nav>
         <div class="intro-text">
           <h1>I'm Whitney.</h1>
-          <span class="headline">A teacher turned </br> full stack developer</span>
+          <span class="headline">A teacher turned</span>
+          <span class="headline">full stack developer</span>
         </div>
       </header>
       <!-- About Me -->
-      <section id="about">
+      <section role="region" id="about">
         <div class="intro-flex-container">
           <div class="headshot-container">
             <img class="headshot" src="./img/headshot-min.jpg" alt="face photo of Whitney">
@@ -79,48 +80,56 @@
         </div>
       </div>
       <!-- Projects Section -->
-      <section>
-        <div>
-            <div class="project-flex-container">
-                <h3>BookSmarts</h3>
-
-              <p class="project-description">BookSmarts is an app that allows you to create, store, rate, and visit links to your favorite bookmarks.</p>
-              <div class="project-links">
-                <a href="https://thinkful-ei-emu.github.io/whitney-bookmarks-app/" class="live-text">LIVE |</a>
-                <a href="https://github.com/thinkful-ei-emu/whitney-bookmarks-app">
-                  <i class="devicon-github-plain-wordmark colored"></i>
-                </a>
-              </div>
-              <img class="project-photo" src="./img/project1.png" alt="screenshot of bookmark app">
-            </div>
-            <div class="technology-badges">
-              <i class="devicon-html5-plain colored"></i>
-              <i class="devicon-css3-plain colored"></i>
-              <i class="devicon-javascript-plain colored"></i>
-              <i class="devicon-jquery-plain colored"></i>
-            </div>
-        </div>
-        <div class="project-divider"></div>
-        <div>
-            <h3>Brain Fluff</h3>
-            <div class="project-flex-container">
-              <p class="project-description">A quiz app that asks you random trivia questions.  Keep playing to try and beat your high score!</p>
-              <div class="project-links">
-                  <a href="" class="live-text">LIVE |</a>
-                  <a href="">
+      <section role="region">
+        <div class="project-flex-container">
+          <h3>BookSmarts</h3>
+            <div class="project-inner-container">
+              <div class="project-description-container">
+                <p class="project-description">BookSmarts is an app that allows you to create, store, rate, and visit links to your favorite bookmarks.  This app is for anyone who wants to rate and save their bookmarks, with the ability to filter by rating.</p>
+                <p class="project-description">This project was created as part of the Thinkful Engineering Immersion program.</p>
+                <div class="project-links">
+                  <a href="https://thinkful-ei-emu.github.io/whitney-bookmarks-app/" class="live-text" aria-label="link to live code example">LIVE |</a>
+                  <a href="https://github.com/thinkful-ei-emu/whitney-bookmarks-app" aria-label="link to GitHub code repository">
                     <i class="devicon-github-plain-wordmark colored"></i>
                   </a>
                 </div>
-                <img class="project-photo" src="./img/quiz-app.png" alt="PLACEHOLDER">
               </div>
-              <div class="technology-badges">
-                <i class="devicon-html5-plain colored"></i>
-                <i class="devicon-css3-plain colored"></i>
-                <i class="devicon-javascript-plain colored"></i>
-                <i class="devicon-jquery-plain colored"></i>
-                <i class="devicon-nodejs-plain colored"></i>
+              <div class="project-photo-container">
+                <img class="project-photo" src="./img/project1.png" alt="screenshot of bookmark app">
               </div>
+              </div>
+            <div class="technology-badges" aria-label="technologies used">
+              <i class="devicon-html5-plain colored" aria-label="html5 icon"></i>
+              <i class="devicon-css3-plain colored" aria-label="css3 icon"></i>
+              <i class="devicon-javascript-plain colored" aria-label="javascript icon"></i>
+              <i class="devicon-jquery-plain colored" aria-label="jquery icon"></i>
+            </div>
           </div>
+          <div class="project-divider"></div>
+          <div class="project-flex-container">
+            <h3>Brain Fluff</h3>
+              <div class="project-inner-container">
+                <div class="project-description-container">
+                  <p class="project-description">Brain Fluff is a quiz app that asks you random trivia questions.  Keep playing to try and beat your high score! </p>
+                  <div class="project-links">
+                    <a href="" class="live-text" aria-label="link to live code example">LIVE |</a>
+                    <a href="" aria-label="link to GitHub code repository">
+                      <i class="devicon-github-plain-wordmark colored"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-photo-container">
+                  <img class="project-photo" src="./img/quiz-app.png" alt="trivia quiz app screenshot">
+                </div>
+              </div>
+              <div class="technology-badges" aria-label="technologies used">
+                <i class="devicon-html5-plain colored" aria-label="html5 icon"></i>
+                <i class="devicon-css3-plain colored" aria-label="css3 icon"></i>
+                <i class="devicon-javascript-plain colored" aria-label="javascript icon"></i>
+                <i class="devicon-jquery-plain colored" aria-label="jquery icon"></i>
+                <i class="devicon-nodejs-plain colored" aria-label="nodejs icon"></i>
+              </div>
+        </div>
       </section>
       <!-- Abilities Heading -->
       <div id="abilities" class="img3">
@@ -129,41 +138,41 @@
         </div>
       </div>
       <!-- Abilities Section -->
-      <section>
+      <section role="region">
         <div class="abilities-flex-container">
           <div class="skills-container">
             <h3>Skills</h3>
             <ul>
               <li>
-                <i class="devicon-git-plain colored"></i>
+                <i class="devicon-git-plain colored" aria-label="git icon"></i>
               </li>
               <li>
-                <i class="devicon-visualstudio-plain colored"></i>
+                <i class="devicon-visualstudio-plain colored" aria-label="visualstudiocode icon"></i>
               </li>
               <li>
-                  <i class="devicon-html5-plain colored"></i>
+                  <i class="devicon-html5-plain colored" aria-label="html5 icon"></i>
               </li>
               <li>
-                  <i class="devicon-css3-plain colored"></i>
+                  <i class="devicon-css3-plain colored" aria-label="css3 icon"></i>
               </li>
               <li>
-                  <i class="devicon-javascript-plain colored"></i>
+                  <i class="devicon-javascript-plain colored" aria-label="javascript icon"></i>
               </li>
               <li>
-                  <i class="devicon-jquery-plain colored"></i>
+                  <i class="devicon-jquery-plain colored" aria-label="jquery icon"></i>
               </li>
               <li>
-                  <i class="devicon-nodejs-plain colored"></i>
+                  <i class="devicon-nodejs-plain colored" aria-label="nodejs icon"></i>
               </li>
               <li>
-                  <i class="devicon-github-plain colored"></i>
+                  <i class="devicon-github-plain colored" aria-label="github icon"></i>
               </li>
             </ul>
           </div>
           <div class="education">
             <h3>Education</h3>
             <ul>
-              <li>Thinkful Engineering Immersion Bootcamp - 2019</li>
+              <li>Thinkful Engineering Immersion - 2019</li>
               <li>Masters in Teaching - 2016</li>
               <li>BS in Criminal Justice - 2013</li>
             </ul>
@@ -177,7 +186,7 @@
         </div>
       </div>
       <!-- Contact Section -->
-      <section>
+      <section role="region">
         <div class="contact-flex-container">
           <a href="https://www.google.com/maps/place/Vancouver,+WA/@45.6380464,-122.7590284,11z/data=!3m1!4b1!4m5!3m4!1s0x5495af63c85914f9:0x8456d5112c91e3f3!8m2!3d45.6272259!4d-122.6727305" target="_blank">
             <img class="contact-icon" src="./img/location.svg" alt="location icon">
@@ -200,7 +209,7 @@
     </div>
   </main>
   <!-- Mobile Nav -->
-  <nav class="mobile-nav">
+  <nav role="navigation" class="mobile-nav">
     <ul>
       <li><a class="about mobile" href="#about">About</a></li>
       <li><a class="projects mobile" href="#projects">Projects</a></li>
@@ -209,6 +218,6 @@
     </ul>
   </nav>
   <!-- Footer -->
-  <footer>Whitney Wallace 2019</footer>
+  <footer role="contentinfo">Whitney Wallace 2019</footer>
 </body>
 </html>

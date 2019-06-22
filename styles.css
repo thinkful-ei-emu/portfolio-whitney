@@ -1,7 +1,8 @@
 /* Fonts
-font-family: 'Philosopher', sans-serif;
-font-family: 'Muli', sans-serif; 
-font-family: 'Merriweather', serif*/
+Headings: font-family: 'Philosopher', sans-serif;
+Normal text: font-family: 'Muli', sans-serif; 
+Quote text: font-family: 'Merriweather', serif*/
+
 * {
   box-sizing: border-box;
 }
@@ -127,6 +128,7 @@ p {
 
 .headline {
   font-size: 11vw;
+  display: block;
 }
 
 .img1 {
@@ -313,8 +315,9 @@ footer {
   margin-bottom: 50px;
 }
 
-/* ---------------------MEDIA QUERIES---------------- */
+/* ------------------------------MEDIA QUERIES---------------------------- */
 
+/* ------------------------------550px---------------------------------- */
 @media (min-width: 550px) {
 
   .desktop-nav ul {
@@ -391,16 +394,68 @@ footer {
     text-align: left;
   }
 
+  .project-flex-container h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
   .project-photo {
-    order: -1;
-    width: 40%;
-    padding-left: 40px;
-    padding-right: 20px;
-    padding-bottom: 10px;
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  .project-photo-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+
+  .project-description {
+    padding-right: 5px;
+    text-align: left; 
+    margin-bottom: 10px;
+  }
+
+  .project-description p {
+    font-size: 20px;
+  }
+
+  .project-inner-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .project-description-container {
+    border-right: solid 2px rgb(46, 46, 46);
+    position: relative;
+    /* height: 100%; */
+    width: 50%;
+    padding-bottom: 60px;
+  }
+
+  .project-links {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .live-text {
+    font-size: 25px;
+  }
+
+  .devicon-github-plain-wordmark {
+    font-size: 60px;
   }
 
   .technology-badges {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 
   .abilities-flex-container {
@@ -410,13 +465,21 @@ footer {
     padding: 15px;
   }
 
-  /* .contact-flex-container {
+  .education ul {
+    text-align: left;
+  }
+
+  .contact-flex-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin: 10px 10px;
     flex-wrap: wrap;
-  } */
+  }
+
+  .contact-flex-container a {
+    margin: 0;
+  }
 
   main {
     font-size: 20px;
@@ -452,8 +515,18 @@ footer {
   }
 }
 
+/* ------------------------------800px---------------------------------- */
+
+@media (min-width: 800px) {
+  p {
+    font-size: 20px;
+  }
+}
+
+/* ------------------------------1200px---------------------------------- */
+
 @media (min-width: 1200px) {
-  /* main {
+  main {
     display: flex;
     justify-content: center;
     background-color: transparent;
@@ -461,5 +534,5 @@ footer {
 
   .main-flex-container {
     width: 1200px;
-  } */
+  }
 }
