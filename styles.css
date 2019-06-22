@@ -1,6 +1,7 @@
 /* Fonts
 font-family: 'Philosopher', sans-serif;
-font-family: 'Muli', sans-serif; */
+font-family: 'Muli', sans-serif; 
+font-family: 'Merriweather', serif*/
 * {
   box-sizing: border-box;
 }
@@ -15,11 +16,19 @@ main {
   /* font-size: 18px; */
 }
 
-nav {
-  background-color: rgb(31, 31, 31);
-  color: white;
+.desktop-nav {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   text-align: right;
   padding-right: 10px;
+}
+
+.desktop-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 header {  
@@ -28,9 +37,10 @@ header {
 }
 
 .headshot {
-  height: 100%;
-  width: 200px;
-  margin-top: 30px;
+  display: none;
+  /* height: 100%;
+  width: 200px; */
+  /* margin-top: 30px; */
   /* border-radius: 20px; */
 }
 
@@ -40,7 +50,7 @@ header {
   text-shadow: 5px 5px 8px black;
   /* padding-top: 70px; */
   /* padding-left: 30px; */
-  text-align: left;
+  text-align: center;
 }
 
 section {
@@ -50,23 +60,46 @@ section {
 
 .project-photo {
   width: 80%;
+  box-shadow:5px 5px 10px black;
 }
 
 .project-divider {
-  background-color: black;
-  color: white;
+  background-color: rgb(46, 46, 46);
+  height: 3px;
+}
+
+.project-description {
+  text-align: center;
 }
 
 .divider-text {
   font-family: 'Philosopher', sans-serif;
 }
 
-footer {
-  background-color: rgb(50, 50, 50);
-  color: white;
+.mobile {
+  text-decoration: none;
+  color: lightgray;
+  margin-left: 20px;
+  font-size: 16px;
+  font-family: 'Muli', sans-serif;
+  text-shadow: 5px 5px 8px black;
 }
 
+.about:hover {
+  color: #BEFCFC;
+}
 
+.projects:hover, .projects-title {
+  color: #FBA080;
+}
+
+.abilities:hover, .abilities-title {
+  color: #FBB980;
+}
+
+.contact:hover, .contact-title {
+  color: #EBFBFF;
+}
 
 h2, p, h1, h3, ul{
   margin: 0;
@@ -74,11 +107,13 @@ h2, p, h1, h3, ul{
 
 h1 {
   padding-bottom: 20px;
+  margin-top: 160px;
   font-size: 16vw;
 }
 
 h2 {
   font-size: 50px;
+  margin-top: 70px;
   padding: 10px;
   color: white;
   text-shadow: 5px 5px 8px black;
@@ -97,14 +132,15 @@ ul {
 }
 
 li, p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
 }
 
 p {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
   text-align: left;
+  padding-bottom: 10px;
 }
 
 .headline {
@@ -112,23 +148,45 @@ p {
 }
 
 .img1 {
-  background-image: url('./img/img1wscrim.png');
-  min-height: 500px;
+  background-image: 
+  url('./img/bottom-chevron.svg'),
+    url('./img/img1.png');
+  background-position: 
+    top center,
+    bottom center;
+  min-height: 600px;
 }
 
 .img2 {
-  background-image: url('./img/img2wscrim.png');
-  min-height: 150px;
+  background-image: 
+  url('./img/bottom-chevron.svg'),
+  url('./img/img2.png');
+  background-position:
+    bottom center,
+    top center;
+  /* min-height: 350px; */
+  height: 300px; 
 }
 
 .img3 {
-  background-image: url('./img/img3wscrim.png');
-  min-height: 150px;
+  background-image:   
+    url('./img/bottom-chevron.svg'),
+    url('./img/img3.png');
+  background-position:
+    bottom center,
+    top center;
+  /* min-height: 150px; */
+  height: 300px;
 }
 
 .img4 {
-  background-image: url('./img/img4wscrim.png');
-  min-height: 150px;
+  background-image: url('./img/bottom-chevron.svg'),
+  url('./img/img4.png');
+  background-position:
+    bottom center,
+    top center;
+  height: 300px;
+  /* min-height: 150px; */
 }
 
 .img1, .img2, .img3, .img4 {
@@ -138,24 +196,167 @@ p {
   background-repeat: no-repeat;
   background-attachment: scroll;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.hidden {
+.bio-opener {
+  font-size: 5vw;
+  line-height: 1.3em;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.extra-bio {
   display: none;
+}
+
+.bio-paragraphs {
+  margin-bottom: 20px;
+}
+
+.project-links {
+  margin-bottom: 10px;
+}
+
+.live-text {
+  color: black;
+  font-size: 20px;
+}
+
+.devicon-github-plain-wordmark {
+  text-decoration: none;
+  font-size: 35px;
+}
+
+.project-links a {
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  color: #FBA080;
+}
+
+.technology-badges {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.abilities-flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.devicon-git-plain, 
+.devicon-visualstudio-plain,
+.devicon-html5-plain,
+.devicon-css3-plain,
+.devicon-javascript-plain,
+.devicon-jquery-plain,
+.devicon-nodejs-plain,
+.devicon-github-plain {
+  font-size: 40px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.skills-container ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.contact-flex-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.contact-flex-container a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  margin-left: 25%
+}
+
+.contact-flex-container a span {
+  font-size: 20px;
+  margin-left: 5px;
+  padding-top: 5px;
+  color: black;
+}
+
+.contact-flex-container a span:hover {
+  color: #DAC4FF;
+}
+
+.contact-icon {
+  height: 35px;
+  width: 35px;
+}
+
+.mobile-nav {
+  background-color: rgb(46, 46, 46);
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.mobile-nav li a{
+  font-size: 16px;
+  margin-left: 0;
+}
+
+footer {
+  background-color: rgb(46, 46, 46);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 50px;
 }
 
 /* MEDIA QUERIES */
 
 @media (min-width: 550px) {
-  .intro-flex-container, .project-flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+
+  .desktop-nav {
+    display: inline;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .bio-opener {
+    font-size: 25px;
+  }
+
+  .extra-bio {
+    display: block;
+  }
+
+  footer {
+    margin-bottom: 0px;
   }
 
   .headshot {
+    display: block;
     padding: 40px;
     padding-top: 20px;
     width: 300px;
@@ -205,8 +406,14 @@ p {
     font-size: 50px;
   }
 
-  .img1, .img2, .img3, .img4 {
-    background-attachment: fixed;
+  .img1 {
+    background-attachment: scroll,
+    fixed;
+  } 
+  
+  .img2, .img3, .img4 {
+    background-attachment: scroll,  
+    fixed;
   }
 }
 
